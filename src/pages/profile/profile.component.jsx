@@ -3,7 +3,7 @@ import './profile.styles.scss'
 
 
 const ProfilePage = () => (
-    <div className='homePage'>
+    <div className='profilePage'>
         PROFILE PAGE     
     </div>
 )

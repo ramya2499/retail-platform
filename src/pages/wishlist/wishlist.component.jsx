@@ -3,7 +3,7 @@ import './wishlist.styles.scss'
 
 
 const WishlistPage = () => (
-    <div className='homePage'>
+    <div className='wishlistPage'>
         Wishlist PAGE     
     </div>
 )
