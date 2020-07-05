@@ -12,8 +12,7 @@ export const Header = () => (
         <div className='options'>
         <Link to="/shop" className="option">SHOP</Link>
         <Link to="/contact" className="option">CONTACT</Link>
-        <Link to="/about" className="option">ABOUT</Link>
-        <Link to="/profile" className="option">PROFILE</Link>    
+        <Link to="/aboutus" className="option">ABOUT US</Link>
         <Link to="/cart" className="option icon"><i class="fa fa-shopping-cart"></i></Link>
         <Link to="/profile" className="option" ><i class="fa fa-user"></i></Link> 
         <Link to="/wishlist" className="option"><i class="fa fa-heart"></i></Link> 
@@ -25,4 +24,5 @@ export const Header = () => (
         
         
     </div>
+    
 )
