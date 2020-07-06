@@ -4,7 +4,7 @@ import './homepage.styles.scss'
 
 const HomePage = () => (
     <div className='homePage'>
-        HOME PAGE      
+        HOME PAGE     
     </div>
 )
 export default HomePage
