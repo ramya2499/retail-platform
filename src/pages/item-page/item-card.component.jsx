@@ -1,16 +1,15 @@
 import React from 'react'
-import './category-item.styles.scss'
+import './item-card.styles.scss'
 import {withRouter} from 'react-router-dom'
 
-const CategoryItem = ({categoryId,imageUrl,history,match}) => (
+const CategoryItem = ({categoryId,imageUrl,brand,history,match}) => (
     
     <div className='collection-item'>
-        {console.log(match,history)}
-        <div className='image' onClick={()=>history.push(`${match.url}/${categoryId}`)}
+         <div className='image' 
         style={{backgroundImage:`url(${imageUrl})`}}
         />
         <div className='collection-footer'>
-            <div className='name'>{categoryId}</div>
+            <div className='name'>{brand}</div>
         </div>
     </div>
  

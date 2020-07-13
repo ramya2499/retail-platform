@@ -10,6 +10,7 @@ import AboutUs from './pages/AboutUs/aboutus.component';
 import Signup from './pages/signup/signup'
 import {Footer} from './components/footer/footer.components'
 import CategoryPage from './pages/category-page/category-page.component'
+import ItemPage from './pages/item-page/item-page.component'
 
 
 
@@ -26,6 +27,7 @@ function App() {
         <Route exact path='/wishlist' component={Wishlist}/>
         <Route  path='/signup' component={Signup}/>
         <Route exact path='/:groupId' component={CategoryPage}/>
+        <Route exact path='/:groupId/:categoryId' component={ItemPage}/>
       
 
         </Switch>
