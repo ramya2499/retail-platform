@@ -10,14 +10,12 @@ export const Header = () => (
             <img src={image} alt="logo" style={{height:"50px",marginLeft:"70px" }}/>           
         </Link>
         <div className='options'>
-        <Link to="/shop" className="option"><b>SHOP</b></Link>
-        <Link to="/contact" className="option"><b>CONTACT</b></Link>
+         <Link to="/contact" className="option"><b>CONTACT</b></Link>
         <Link to="/aboutus" className="option"><b>ABOUT US</b></Link>
-        <Link to="/cart" className="option icon"><i class="fa fa-shopping-cart"></i></Link>
-        <Link to="/profile" className="option" ><i class="fa fa-user"></i></Link> 
-        <Link to="/wishlist" className="option"><i class="fa fa-heart"></i></Link>
-        <Link to="/signup" className="option"><b>SIGNUP/LOGIN</b></Link>
-        
+        <Link to="/cart" className="option icon"><i className="fa fa-shopping-cart"></i></Link>
+        <Link to="/profile" className="option" ><i className="fa fa-user"></i></Link> 
+        <Link to="/wishlist" className="option"><i className="fa fa-heart"></i></Link>
+        <Link to="/signup" className="option"><b>SIGNUP/LOGIN</b></Link>   
         </div>    
     </div>  
 )
