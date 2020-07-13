@@ -6,9 +6,14 @@ class ProductService {
     getAll() {
       return  http.get("/groups");
     }
-    //get categories per id
+    //get categories for each groupid
     getCategoriesByGroupId(id){
       return http.get(`/categories/${id}`)
+    
+    }
+    //get items for each categoryId
+    getItemsByCategoryId(id){
+      return http.get(`/items/${id}`)
     
     }
     
