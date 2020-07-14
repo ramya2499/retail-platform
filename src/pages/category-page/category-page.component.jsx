@@ -33,22 +33,16 @@ class CategoryPage extends React.Component {
     render () {        
         
         console.log(this.state.categories)
-        return (<center>
-
-        <div className='collection-preview'>
-
-          
-          <div className="title">{this.state.groupId.toUpperCase()}</div>
-     
-          <div className='preview'>
-         {
-           this.state.categories.map(category=>(
-           <CategoryItem key={category.categoryId} categoryId={category.categoryId} imageUrl={category.imageUrl}/>
-           ))
-         
-         }
-         </div>
-        
+        return (
+        <center>
+          <div className='collection-preview'>          
+            <div className="title">{this.state.groupId.toUpperCase()}</div>     
+              <div className='preview'>
+              { this.state.categories.map(category=>(
+                <CategoryItem key={category.categoryId} categoryId={category.categoryId} imageUrl={category.imageUrl}/>
+                ))
+                }
+              </div>        
           </div>
           </center>
           )

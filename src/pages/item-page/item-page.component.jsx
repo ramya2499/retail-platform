@@ -8,15 +8,17 @@ class ItemPage extends React.Component {
         super(props);
         this.state = {
           categoryId:'',
+          groupId:'',
             items: []                   
         }
     }
 
     componentDidMount(){
+      console.log(this.props)
 
-       this.setState({categoryId:this.props.match.params.categoryId},
+       this.setState({categoryId:this.props.match.params.categoryId,groupId:this.props.match.params.groupId},
         ()=>(
-          productService.getItemsByCategoryId(this.state.categoryId)
+          productService.getItemsByGroupIdCategoryId(this.state.groupId,this.state.categoryId)
           .then(response => {
             this.setState({
               items: response.data
@@ -39,19 +41,12 @@ class ItemPage extends React.Component {
               <div className="title">{this.state.categoryId.toUpperCase()}</div>     
                 <div className='preview'>
                 { this.state.items.map(item=>(
-                  <ItemCard key={item.itemId} itemId={item.itemId} imageUrl={item.imageUrl} brand={item.brand}/>
+                  <ItemCard key={item.itemId} groupId={item.groupId} itemId={item.itemId} imageUrl={item.imageUrl} brand={item.brand} price={item.price} bookTitle={item.bookTitle}/>
                   ))
                   }
                 </div>        
             </div>
             </center>
-     
-                // <center>      
-                // {
-                // this.state.items.map(item=>(
-                // <div>{item.brand}</div>))
-                // }         
-                // </center>
         )
 
     }
