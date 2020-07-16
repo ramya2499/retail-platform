@@ -32,7 +32,7 @@ class CategoryPage extends React.Component {
 
     render () {        
         
-        console.log(this.state.categories)
+       
         return (
         <center>
           <div className='collection-preview'>          

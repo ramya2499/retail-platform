@@ -34,14 +34,14 @@ class ItemPage extends React.Component {
 
     render () {        
         
-        console.log(this.state.items)
+  
         return (
             <center>
             <div className='collection-preview'>          
               <div className="title">{this.state.categoryId.toUpperCase()}</div>     
                 <div className='preview'>
                 { this.state.items.map(item=>(
-                  <ItemCard key={item.itemId} groupId={item.groupId} itemId={item.itemId} imageUrl={item.imageUrl} brand={item.brand} price={item.price} bookTitle={item.bookTitle}/>
+                  <ItemCard key={item.itemId} groupId={item.groupId} categoryId={item.categoryId} itemId={item.itemId} imageUrl={item.imageUrl} title={item.title} price={item.price} />
                   ))
                   }
                 </div>        

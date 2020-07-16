@@ -5,7 +5,7 @@ import {withRouter} from 'react-router-dom'
 const CategoryItem = ({categoryId,imageUrl,history,match}) => (
     
     <div className='collection-item'>
-        {console.log(match,history)}
+      
         <div className='image' onClick={()=>history.push(`${match.url}/${categoryId}`)}
         style={{backgroundImage:`url(${imageUrl})`}}
         />

@@ -11,6 +11,7 @@ import Signup from './pages/signup/signup'
 import {Footer} from './components/footer/footer.components'
 import CategoryPage from './pages/category-page/category-page.component'
 import ItemPage from './pages/item-page/item-page.component'
+import ProductDetailsPage from './pages/product-details-page/product-details.component'
 
 
 
@@ -28,6 +29,7 @@ function App() {
         <Route  path='/signup' component={Signup}/>
         <Route exact path='/:groupId' component={CategoryPage}/>
         <Route exact path='/:groupId/:categoryId' component={ItemPage}/>
+        <Route exact path='/:groupId/:categoryId/:itemId' component={ProductDetailsPage}/>
       
 
         </Switch>

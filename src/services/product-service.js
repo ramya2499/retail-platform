@@ -17,6 +17,12 @@ class ProductService {
     
     }
 
+         //get items mapped to a group for certain  category
+         getItemsByGroupIdCategoryIdItemId(groupId,categoryId,itemId){
+          return http.get(`/items/${groupId}/${categoryId}/${itemId}`)
+        
+        }
+
 
     //get items for mapped to a category
     getItemsByCategoryId(categoryId){
