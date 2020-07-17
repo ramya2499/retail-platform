@@ -5,6 +5,7 @@ import Book from './item-detail-table/book';
 import Grocery from './item-detail-table/grocery';
 import Chair from './item-detail-table/chair';
 import './product-details.styles.scss'
+import Footwear from './item-detail-table/footwear'
 
 
 
@@ -59,6 +60,7 @@ class ProductDetailsPage extends React.Component {
                   return <WomenTopWear description={this.state.description} />;
               case 'chair':
                 return <Chair description={this.state.description} />;
+                default : return <></>
 
         
       }
@@ -67,8 +69,13 @@ class ProductDetailsPage extends React.Component {
       switch(group) {
         case 'book':
           return <Book description={this.state.description} />;  
+          case 'footwear':
+            return <Footwear description={this.state.description}/>
         case 'grocery':
           return <Grocery description={this.state.description} />;  
+          default :
+          return <></>
+        
           
                 
       }

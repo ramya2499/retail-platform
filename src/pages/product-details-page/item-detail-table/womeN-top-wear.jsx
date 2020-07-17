@@ -15,7 +15,7 @@ class WomenTopWear extends Component {
                 
                 
 
-<div style={{width:"60%" ,marginLeft:"30px"}}>
+<div style={{width:"60%" }}>
 <table class="ui very basic table">
   <tbody>
     <tr>

@@ -11,22 +11,15 @@ class Grocery extends Component {
     render() {
         console.log(this.props.description)
         return (
-            <div>
-
-<div style={{width:"60%" ,marginLeft:"30px"}}>
-<table class="ui very basic table">
-  <tbody>
-    <tr>
-      <td>Quantity</td>
-      <td> {this.props.description.quantityt}</td>      
-    </tr>
-  
-
- 
-  </tbody>
-</table>
-</div>            
-                                 
+            <div style={{width:"60%" ,marginLeft:"30px"}}>      
+                <table class="ui very basic table">
+                <tbody>
+                    <tr>
+                    <td>Quantity</td>
+                    <td> {this.props.description.quantityt}</td>      
+                    </tr>
+                </tbody>
+                </table>                               
             </div>
         );
     }

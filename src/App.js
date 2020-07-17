@@ -29,10 +29,8 @@ function App() {
         <Route  path='/signup' component={Signup}/>
         <Route exact path='/:groupId' component={CategoryPage}/>
         <Route exact path='/:groupId/:categoryId' component={ItemPage}/>
-        <Route exact path='/:groupId/:categoryId/:itemId' component={ProductDetailsPage}/>
-      
-
-        </Switch>
+        <Route exact path='/:groupId/:categoryId/:itemId' component={ProductDetailsPage}/>      
+       </Switch>
         <Footer/> 
     </div>
   );
