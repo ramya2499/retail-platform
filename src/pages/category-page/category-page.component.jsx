@@ -27,9 +27,9 @@ class CategoryPage extends React.Component {
     );
   }
 
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.match.params.groupId !== this.props.match.params.groupId) {
-      this.setState({ groupId: nextProps.match.params.groupId }, () =>
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.groupId !== this.state.groupId) {
+      this.setState({ groupId: this.state.groupId }, () =>
         productService
           .getCategoriesByGroupId(this.state.groupId)
           .then((response) => {
@@ -42,6 +42,12 @@ class CategoryPage extends React.Component {
           })
       );
     }
+  }
+
+  static getDerivedStateFromProps(nextProps, prevState) {
+    if (nextProps.match.params.groupId !== prevState.groupId) {
+      return { groupId: nextProps.match.params.groupId };
+    } else return null;
   }
 
   render() {
