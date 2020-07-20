@@ -33,7 +33,7 @@ export default class Subheader extends Component {
     return (
       <div className="subheader">
         {this.state.groups.map((item) => (
-          <SubheaderList groupId={item.groupId} />
+          <SubheaderList key={item.groupId} groupId={item.groupId} />
         ))}
       </div>
     );

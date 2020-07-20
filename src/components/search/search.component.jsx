@@ -9,6 +9,7 @@ import Paper from "@material-ui/core/Paper";
 import MenuItem from "@material-ui/core/MenuItem";
 import { emphasize } from "@material-ui/core/styles/colorManipulator";
 import axios from "axios";
+import { withRouter } from "react-router-dom";
 
 const styles = (theme) => ({
   root: {
@@ -26,17 +27,17 @@ const styles = (theme) => ({
     alignItems: "center",
     overflow: "hidden",
   },
-  chip: {
-    margin: `${theme.spacing(1 / 2)}px ${theme.spacing(1 / 4)}px`,
-  },
-  chipFocused: {
-    backgroundColor: emphasize(
-      theme.palette.type === "light"
-        ? theme.palette.grey[300]
-        : theme.palette.grey[700],
-      0.08
-    ),
-  },
+  // chip: {
+  //   margin: `${theme.spacing(1 / 2)}px ${theme.spacing(1 / 4)}px`,
+  // },
+  // chipFocused: {
+  //   backgroundColor: emphasize(
+  //     theme.palette.type === "light"
+  //       ? theme.palette.grey[300]
+  //       : theme.palette.grey[700],
+  //     0.08
+  //   ),
+  // },
   noOptionsMessage: {
     padding: `${theme.spacing(1)}px ${theme.spacing(2)}px`,
   },
@@ -164,11 +165,7 @@ const components = {
 };
 
 class Search extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   state = {
-    selectedGroupId: "",
     suggestions: [],
   };
 
@@ -204,9 +201,10 @@ class Search extends React.Component {
   };
 
   handleChange = () => (value) => {
-    this.setState({
-      selectedGroupId: value.value.groupId,
-    });
+    if (value) {
+      const { history } = this.props;
+      history.push(`/${value.value.groupId}/${value.value.categoryId}`);
+    }
   };
 
   render() {
@@ -232,7 +230,6 @@ class Search extends React.Component {
             value: suggestion,
           }))}
           components={components}
-          value={this.state.single}
           onChange={this.handleChange()}
           placeholder="Search category here..."
           isClearable
@@ -247,4 +244,4 @@ Search.propTypes = {
   theme: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles, { withTheme: true })(Search);
+export default withStyles(styles, { withTheme: true })(withRouter(Search));
